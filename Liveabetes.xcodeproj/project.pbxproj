@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F26E8236196520F50057BFC4 /* calendar-128.png in Resources */ = {isa = PBXBuildFile; fileRef = F26E822A196520F50057BFC4 /* calendar-128.png */; };
+		F26E8237196520F50057BFC4 /* calendar-512.png in Resources */ = {isa = PBXBuildFile; fileRef = F26E822B196520F50057BFC4 /* calendar-512.png */; };
+		F26E8238196520F50057BFC4 /* one_finger-128.png in Resources */ = {isa = PBXBuildFile; fileRef = F26E822C196520F50057BFC4 /* one_finger-128.png */; };
+		F26E8239196520F50057BFC4 /* one_finger-512.png in Resources */ = {isa = PBXBuildFile; fileRef = F26E822D196520F50057BFC4 /* one_finger-512.png */; };
+		F26E823A196520F50057BFC4 /* syringe-128.png in Resources */ = {isa = PBXBuildFile; fileRef = F26E822E196520F50057BFC4 /* syringe-128.png */; };
+		F26E823B196520F50057BFC4 /* syringe-512.png in Resources */ = {isa = PBXBuildFile; fileRef = F26E822F196520F50057BFC4 /* syringe-512.png */; };
+		F26E823C196520F50057BFC4 /* water-128.png in Resources */ = {isa = PBXBuildFile; fileRef = F26E8230196520F50057BFC4 /* water-128.png */; };
+		F26E823D196520F50057BFC4 /* water-512.png in Resources */ = {isa = PBXBuildFile; fileRef = F26E8231196520F50057BFC4 /* water-512.png */; };
+		F26E823E196520F50057BFC4 /* weight-128.png in Resources */ = {isa = PBXBuildFile; fileRef = F26E8232196520F50057BFC4 /* weight-128.png */; };
+		F26E823F196520F50057BFC4 /* weight-512.png in Resources */ = {isa = PBXBuildFile; fileRef = F26E8233196520F50057BFC4 /* weight-512.png */; };
+		F26E8240196520F50057BFC4 /* weightlift-128.png in Resources */ = {isa = PBXBuildFile; fileRef = F26E8234196520F50057BFC4 /* weightlift-128.png */; };
+		F26E8241196520F50057BFC4 /* weightlift-512.png in Resources */ = {isa = PBXBuildFile; fileRef = F26E8235196520F50057BFC4 /* weightlift-512.png */; };
+		F26E8243196521710057BFC4 /* walking-512.png in Resources */ = {isa = PBXBuildFile; fileRef = F26E8242196521710057BFC4 /* walking-512.png */; };
+		F26E8245196525C90057BFC4 /* polyline-512.png in Resources */ = {isa = PBXBuildFile; fileRef = F26E8244196525C90057BFC4 /* polyline-512.png */; };
 		F27F18EE196512C0006E14F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27F18ED196512C0006E14F9 /* Foundation.framework */; };
 		F27F18F0196512C0006E14F9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27F18EF196512C0006E14F9 /* CoreGraphics.framework */; };
 		F27F18F2196512C0006E14F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27F18F1196512C0006E14F9 /* UIKit.framework */; };
@@ -34,6 +48,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F26E822A196520F50057BFC4 /* calendar-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-128.png"; sourceTree = "<group>"; };
+		F26E822B196520F50057BFC4 /* calendar-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-512.png"; sourceTree = "<group>"; };
+		F26E822C196520F50057BFC4 /* one_finger-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "one_finger-128.png"; sourceTree = "<group>"; };
+		F26E822D196520F50057BFC4 /* one_finger-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "one_finger-512.png"; sourceTree = "<group>"; };
+		F26E822E196520F50057BFC4 /* syringe-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "syringe-128.png"; sourceTree = "<group>"; };
+		F26E822F196520F50057BFC4 /* syringe-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "syringe-512.png"; sourceTree = "<group>"; };
+		F26E8230196520F50057BFC4 /* water-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "water-128.png"; sourceTree = "<group>"; };
+		F26E8231196520F50057BFC4 /* water-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "water-512.png"; sourceTree = "<group>"; };
+		F26E8232196520F50057BFC4 /* weight-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weight-128.png"; sourceTree = "<group>"; };
+		F26E8233196520F50057BFC4 /* weight-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weight-512.png"; sourceTree = "<group>"; };
+		F26E8234196520F50057BFC4 /* weightlift-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weightlift-128.png"; sourceTree = "<group>"; };
+		F26E8235196520F50057BFC4 /* weightlift-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weightlift-512.png"; sourceTree = "<group>"; };
+		F26E8242196521710057BFC4 /* walking-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "walking-512.png"; sourceTree = "<group>"; };
+		F26E8244196525C90057BFC4 /* polyline-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "polyline-512.png"; sourceTree = "<group>"; };
 		F27F18EA196512C0006E14F9 /* Liveabetes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Liveabetes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27F18ED196512C0006E14F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F27F18EF196512C0006E14F9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +107,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F26E8229196520F50057BFC4 /* Live-a-betes Icons */ = {
+			isa = PBXGroup;
+			children = (
+				F26E8244196525C90057BFC4 /* polyline-512.png */,
+				F26E8242196521710057BFC4 /* walking-512.png */,
+				F26E822A196520F50057BFC4 /* calendar-128.png */,
+				F26E822B196520F50057BFC4 /* calendar-512.png */,
+				F26E822C196520F50057BFC4 /* one_finger-128.png */,
+				F26E822D196520F50057BFC4 /* one_finger-512.png */,
+				F26E822E196520F50057BFC4 /* syringe-128.png */,
+				F26E822F196520F50057BFC4 /* syringe-512.png */,
+				F26E8230196520F50057BFC4 /* water-128.png */,
+				F26E8231196520F50057BFC4 /* water-512.png */,
+				F26E8232196520F50057BFC4 /* weight-128.png */,
+				F26E8233196520F50057BFC4 /* weight-512.png */,
+				F26E8234196520F50057BFC4 /* weightlift-128.png */,
+				F26E8235196520F50057BFC4 /* weightlift-512.png */,
+			);
+			path = "Live-a-betes Icons";
+			sourceTree = "<group>";
+		};
 		F27F18E1196512C0006E14F9 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +175,7 @@
 		F27F18F4196512C0006E14F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F26E8229196520F50057BFC4 /* Live-a-betes Icons */,
 				F27F18F5196512C0006E14F9 /* Liveabetes-Info.plist */,
 				F27F18F6196512C0006E14F9 /* InfoPlist.strings */,
 				F27F18F9196512C0006E14F9 /* main.m */,
@@ -229,7 +279,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F27F1906196512C0006E14F9 /* Images.xcassets in Resources */,
+				F26E823E196520F50057BFC4 /* weight-128.png in Resources */,
+				F26E8237196520F50057BFC4 /* calendar-512.png in Resources */,
+				F26E8239196520F50057BFC4 /* one_finger-512.png in Resources */,
+				F26E8243196521710057BFC4 /* walking-512.png in Resources */,
+				F26E8245196525C90057BFC4 /* polyline-512.png in Resources */,
+				F26E823D196520F50057BFC4 /* water-512.png in Resources */,
+				F26E823C196520F50057BFC4 /* water-128.png in Resources */,
+				F26E823B196520F50057BFC4 /* syringe-512.png in Resources */,
+				F26E8241196520F50057BFC4 /* weightlift-512.png in Resources */,
+				F26E823A196520F50057BFC4 /* syringe-128.png in Resources */,
+				F26E8236196520F50057BFC4 /* calendar-128.png in Resources */,
+				F26E8238196520F50057BFC4 /* one_finger-128.png in Resources */,
+				F26E823F196520F50057BFC4 /* weight-512.png in Resources */,
 				F27F18F8196512C0006E14F9 /* InfoPlist.strings in Resources */,
+				F26E8240196520F50057BFC4 /* weightlift-128.png in Resources */,
 				F27F1901196512C0006E14F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +520,7 @@
 				F27F191E196512C0006E14F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F27F191F196512C0006E14F9 /* Build configuration list for PBXNativeTarget "LiveabetesTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +529,7 @@
 				F27F1921196512C0006E14F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
