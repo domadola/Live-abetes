@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GlucoseReadingsViewController : UIViewController
+@interface GlucoseReadingsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue;
 

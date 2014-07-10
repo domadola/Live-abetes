@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GlucoseInfo.h"
 
 @interface AddGlucoseReadingViewController : UIViewController
+
+@property GlucoseInfo *info;
 
 @end

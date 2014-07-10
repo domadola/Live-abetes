@@ -9,10 +9,24 @@
 #import "AddGlucoseReadingViewController.h"
 
 @interface AddGlucoseReadingViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *glucoseNumber;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 @end
 
 @implementation AddGlucoseReadingViewController
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if (sender != self.saveButton) return;
+    
+    if (self.glucoseNumber.text.length > 0) {
+        self.info = [[GlucoseInfo alloc] init];
+        self.info.readingMgDl = [NSNumber numberWithInt:[self.glucoseNumber.text intValue]];
+        //info.date = [[NSDate init] alloc];
+        self.info.completed = NO;
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

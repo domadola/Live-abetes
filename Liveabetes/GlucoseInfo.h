@@ -10,8 +10,9 @@
 
 @interface GlucoseInfo : NSObject
 
-@property NSUInteger *readingMgDl;
+@property NSNumber *readingMgDl;
 @property NSDate *date;
 @property NSString *notes;
+@property BOOL completed;
 
 @end

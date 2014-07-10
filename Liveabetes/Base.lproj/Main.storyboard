@@ -160,6 +160,9 @@
                                         <state key="normal" title=">">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="incrementDatePressed:" destination="2sP-Mr-Grn" eventType="touchUpInside" id="o6r-BP-QLX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0d-H5-hFC">
                                         <rect key="frame" x="0.0" y="8" width="46" height="30"/>
@@ -168,6 +171,9 @@
                                         <state key="normal" title="&lt;">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="decrementDatePressed:" destination="2sP-Mr-Grn" eventType="touchUpInside" id="PXC-Jm-ElK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -176,6 +182,20 @@
                                 <rect key="frame" x="0.0" y="113" width="320" height="409"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GlucoseReadingCell" id="6dc-o9-rZ8">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6dc-o9-rZ8" id="huP-Uw-xOW">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2sP-Mr-Grn" id="euZ-NQ-TkG"/>
+                                    <outlet property="delegate" destination="2sP-Mr-Grn" id="ZNq-as-TnN"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -193,6 +213,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="dayLabel" destination="OpJ-aB-AZc" id="dqg-pV-3P8"/>
+                        <outlet property="decrementDateButton" destination="W0d-H5-hFC" id="4Pe-24-p3H"/>
+                        <outlet property="incrementDateButton" destination="MJR-z3-1SF" id="jde-vr-LFo"/>
+                        <outlet property="tableView" destination="XlI-Iz-EkV" id="PqJ-gQ-SVn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BXr-eO-DoF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,6 +257,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="glucoseNumber" destination="LBe-WI-0uW" id="ucn-hQ-Puj"/>
+                        <outlet property="saveButton" destination="15f-wv-Ty3" id="2fW-P1-DzS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cd3-xf-X3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5p2-md-ucp" userLabel="Exit" sceneMemberID="exit"/>
