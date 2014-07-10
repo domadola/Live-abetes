@@ -35,6 +35,12 @@
 		F27F190F196512C0006E14F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27F18F1196512C0006E14F9 /* UIKit.framework */; };
 		F27F1917196512C0006E14F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F27F1915196512C0006E14F9 /* InfoPlist.strings */; };
 		F27F1919196512C0006E14F9 /* LiveabetesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F27F1918196512C0006E14F9 /* LiveabetesTests.m */; };
+		F2AFA87A196E1FFA000F84E6 /* settings-32.png in Resources */ = {isa = PBXBuildFile; fileRef = F2AFA879196E1FFA000F84E6 /* settings-32.png */; };
+		F2AFA87E196E207A000F84E6 /* settings-25.png in Resources */ = {isa = PBXBuildFile; fileRef = F2AFA87D196E207A000F84E6 /* settings-25.png */; };
+		F2AFA881196E2838000F84E6 /* GlucoseReadingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AFA880196E2838000F84E6 /* GlucoseReadingsViewController.m */; };
+		F2AFA884196E2865000F84E6 /* AddGlucoseReadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AFA883196E2865000F84E6 /* AddGlucoseReadingViewController.m */; };
+		F2AFA887196E321D000F84E6 /* GlucoseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AFA886196E321D000F84E6 /* GlucoseInfo.m */; };
+		F2CB742819653C6E007662DC /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CB742719653C6E007662DC /* ActivityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +87,16 @@
 		F27F1914196512C0006E14F9 /* LiveabetesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiveabetesTests-Info.plist"; sourceTree = "<group>"; };
 		F27F1916196512C0006E14F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F27F1918196512C0006E14F9 /* LiveabetesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveabetesTests.m; sourceTree = "<group>"; };
+		F2AFA879196E1FFA000F84E6 /* settings-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-32.png"; sourceTree = "<group>"; };
+		F2AFA87D196E207A000F84E6 /* settings-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-25.png"; path = "../../../../Downloads/icons8_lightbox-4/PNG/25/settings-25.png"; sourceTree = "<group>"; };
+		F2AFA87F196E2838000F84E6 /* GlucoseReadingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlucoseReadingsViewController.h; sourceTree = "<group>"; };
+		F2AFA880196E2838000F84E6 /* GlucoseReadingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlucoseReadingsViewController.m; sourceTree = "<group>"; };
+		F2AFA882196E2865000F84E6 /* AddGlucoseReadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddGlucoseReadingViewController.h; sourceTree = "<group>"; };
+		F2AFA883196E2865000F84E6 /* AddGlucoseReadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddGlucoseReadingViewController.m; sourceTree = "<group>"; };
+		F2AFA885196E321D000F84E6 /* GlucoseInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlucoseInfo.h; sourceTree = "<group>"; };
+		F2AFA886196E321D000F84E6 /* GlucoseInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlucoseInfo.m; sourceTree = "<group>"; };
+		F2CB742619653C6E007662DC /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		F2CB742719653C6E007662DC /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +126,8 @@
 		F26E8229196520F50057BFC4 /* Live-a-betes Icons */ = {
 			isa = PBXGroup;
 			children = (
+				F2AFA87D196E207A000F84E6 /* settings-25.png */,
+				F2AFA879196E1FFA000F84E6 /* settings-32.png */,
 				F26E8244196525C90057BFC4 /* polyline-512.png */,
 				F26E8242196521710057BFC4 /* walking-512.png */,
 				F26E822A196520F50057BFC4 /* calendar-128.png */,
@@ -164,6 +182,14 @@
 				F27F18FC196512C0006E14F9 /* AppDelegate.h */,
 				F27F18FD196512C0006E14F9 /* AppDelegate.m */,
 				F27F18FF196512C0006E14F9 /* Main.storyboard */,
+				F2AFA885196E321D000F84E6 /* GlucoseInfo.h */,
+				F2AFA886196E321D000F84E6 /* GlucoseInfo.m */,
+				F2AFA882196E2865000F84E6 /* AddGlucoseReadingViewController.h */,
+				F2AFA883196E2865000F84E6 /* AddGlucoseReadingViewController.m */,
+				F2AFA87F196E2838000F84E6 /* GlucoseReadingsViewController.h */,
+				F2AFA880196E2838000F84E6 /* GlucoseReadingsViewController.m */,
+				F2CB742619653C6E007662DC /* ActivityViewController.h */,
+				F2CB742719653C6E007662DC /* ActivityViewController.m */,
 				F27F1902196512C0006E14F9 /* ViewController.h */,
 				F27F1903196512C0006E14F9 /* ViewController.m */,
 				F27F1905196512C0006E14F9 /* Images.xcassets */,
@@ -249,6 +275,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Lamendola;
 				TargetAttributes = {
+					F27F18E9196512C0006E14F9 = {
+						DevelopmentTeam = US869A6C32;
+					};
 					F27F190A196512C0006E14F9 = {
 						TestTargetID = F27F18E9196512C0006E14F9;
 					};
@@ -291,10 +320,12 @@
 				F26E823A196520F50057BFC4 /* syringe-128.png in Resources */,
 				F26E8236196520F50057BFC4 /* calendar-128.png in Resources */,
 				F26E8238196520F50057BFC4 /* one_finger-128.png in Resources */,
+				F2AFA87E196E207A000F84E6 /* settings-25.png in Resources */,
 				F26E823F196520F50057BFC4 /* weight-512.png in Resources */,
 				F27F18F8196512C0006E14F9 /* InfoPlist.strings in Resources */,
 				F26E8240196520F50057BFC4 /* weightlift-128.png in Resources */,
 				F27F1901196512C0006E14F9 /* Main.storyboard in Resources */,
+				F2AFA87A196E1FFA000F84E6 /* settings-32.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,8 +345,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F27F1904196512C0006E14F9 /* ViewController.m in Sources */,
+				F2AFA887196E321D000F84E6 /* GlucoseInfo.m in Sources */,
 				F27F18FE196512C0006E14F9 /* AppDelegate.m in Sources */,
+				F2AFA881196E2838000F84E6 /* GlucoseReadingsViewController.m in Sources */,
 				F27F18FA196512C0006E14F9 /* main.m in Sources */,
+				F2AFA884196E2865000F84E6 /* AddGlucoseReadingViewController.m in Sources */,
+				F2CB742819653C6E007662DC /* ActivityViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,10 +475,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Liveabetes/Liveabetes-Prefix.pch";
 				INFOPLIST_FILE = "Liveabetes/Liveabetes-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -453,10 +491,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Liveabetes/Liveabetes-Prefix.pch";
 				INFOPLIST_FILE = "Liveabetes/Liveabetes-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
