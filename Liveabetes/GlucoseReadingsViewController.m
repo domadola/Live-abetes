@@ -45,13 +45,30 @@
     [self updateDayLabel];
 }
 
+-(BOOL)isToday:(NSDate *) date
+{
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateComponents *components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:[NSDate date]];
+    NSDate *today = [cal dateFromComponents:components];
+    components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:date];
+    NSDate *otherDate = [cal dateFromComponents:components];
+    
+    if([today isEqualToDate:otherDate]) {
+        return true;
+    }
+    return false;
+}
+
 -(void)updateDayLabel
 {
-    //TODO if day is today, say 'Today'
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
-    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-    self.dayLabel.text = [dateFormatter stringFromDate:self.currentDate];
+    if ([self isToday:self.currentDate]) {
+        self.dayLabel.text = @"Today";
+    } else {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+        [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+        self.dayLabel.text = [dateFormatter stringFromDate:self.currentDate];
+    }
 }
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue

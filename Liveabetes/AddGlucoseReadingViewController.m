@@ -11,7 +11,9 @@
 @interface AddGlucoseReadingViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *glucoseNumber;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
-
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UIDatePicker *timePicker;
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
 @end
 
 @implementation AddGlucoseReadingViewController
@@ -24,8 +26,19 @@
         self.info = [[GlucoseInfo alloc] init];
         self.info.readingMgDl = [NSNumber numberWithInt:[self.glucoseNumber.text intValue]];
         //info.date = [[NSDate init] alloc];
+        self.info.date = self.timePicker.date;
         self.info.completed = NO;
     }
+}
+
+- (IBAction)backgroundClick:(id)sender
+{
+    [self.glucoseNumber resignFirstResponder];
+}
+
+- (IBAction)timePickerValueChanged:(id)sender
+{
+    [self updateTimeLabelToTimePicker];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -41,6 +54,19 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.glucoseNumber becomeFirstResponder];
+    [self updateTimeLabelToTimePicker];
+}
+
+-(void)updateTimeLabelToTimePicker
+{
+    if(!self.dateFormatter) {
+        self.dateFormatter = [[NSDateFormatter alloc] init];
+        [self.dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+        [self.dateFormatter setDateStyle:NSDateFormatterNoStyle];
+    }
+    
+    self.timeLabel.text = [self.dateFormatter stringFromDate:self.timePicker.date];
 }
 
 - (void)didReceiveMemoryWarning
