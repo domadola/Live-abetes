@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "GlucoseInfo.h"
+#import "GlucoseReading.h"
 
 @interface AddGlucoseReadingViewController : UIViewController
 
-@property GlucoseInfo *info;
+@property (strong, nonatomic) NSManagedObjectContext *context; // must be passed to controller first
+@property GlucoseReading *reading;
+@property (strong, nonatomic) NSDateFormatter *timeFormatter;
 
 @end

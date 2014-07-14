@@ -10,6 +10,10 @@
 
 @interface GlucoseReadingsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) NSManagedObjectContext *context;
+@property (strong, nonatomic) NSDateFormatter *timeFormatter;
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
+
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue;
 
 @end

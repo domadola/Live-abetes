@@ -23,11 +23,13 @@
     if (sender != self.saveButton) return;
     
     if (self.glucoseNumber.text.length > 0) {
-        self.info = [[GlucoseInfo alloc] init];
-        self.info.readingMgDl = [NSNumber numberWithInt:[self.glucoseNumber.text intValue]];
-        //info.date = [[NSDate init] alloc];
-        self.info.date = self.timePicker.date;
-        self.info.completed = NO;
+        GlucoseReading *reading = [NSEntityDescription
+                                   insertNewObjectForEntityForName:@"GlucoseReading"
+                                            inManagedObjectContext:self.context];
+        reading.mgdl = [NSNumber numberWithInt:[self.glucoseNumber.text intValue]];
+        reading.date = self.timePicker.date;
+
+        self.reading = reading;
     }
 }
 
@@ -58,15 +60,20 @@
     [self updateTimeLabelToTimePicker];
 }
 
--(void)updateTimeLabelToTimePicker
+-(NSDateFormatter *)timeFormatter
 {
-    if(!self.dateFormatter) {
-        self.dateFormatter = [[NSDateFormatter alloc] init];
-        [self.dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-        [self.dateFormatter setDateStyle:NSDateFormatterNoStyle];
+    if (!_timeFormatter) {
+        _timeFormatter = [[NSDateFormatter alloc] init];
+        [_timeFormatter setTimeStyle:NSDateFormatterMediumStyle];
+        [_timeFormatter setDateStyle:NSDateFormatterNoStyle];
     }
     
-    self.timeLabel.text = [self.dateFormatter stringFromDate:self.timePicker.date];
+    return _timeFormatter;
+}
+
+-(void)updateTimeLabelToTimePicker
+{
+    self.timeLabel.text = [self.timeFormatter stringFromDate:self.timePicker.date];
 }
 
 - (void)didReceiveMemoryWarning

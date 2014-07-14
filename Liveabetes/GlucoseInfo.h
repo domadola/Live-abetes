@@ -13,6 +13,5 @@
 @property NSNumber *readingMgDl;
 @property NSDate *date;
 @property NSString *notes;
-@property BOOL completed;
 
 @end

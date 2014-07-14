@@ -13,13 +13,52 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self initializeManagedDocument];
     return YES;
+}
+
+- (void)initializeManagedDocument
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *documentsDirectory = [[fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
+    NSString *documentName = @"LivabetesDataFile";
+    NSURL *url = [documentsDirectory URLByAppendingPathComponent:documentName];
+    self.documentURL = url;
+    BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:[url path]];
+    UIManagedDocument *managedDocument = [[UIManagedDocument alloc] initWithFileURL:url];
+    if (fileExists) {
+        [managedDocument openWithCompletionHandler:^(BOOL success) {
+            self.document = managedDocument;
+            NSLog(@"done opening document.");
+            [self initializeManagedObjectContext]; }];
+        NSLog(@"opening managed document.");
+    } else {
+        [managedDocument saveToURL:url forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
+            self.document = managedDocument;
+            NSLog(@"done creating document.");
+            [self initializeManagedObjectContext]; }];
+        NSLog(@"creating managed document.");
+    }
+}
+
+// assumes self.document has been initialized
+- (void)initializeManagedObjectContext
+{
+    if (self.document.documentState == UIDocumentStateNormal) {
+        self.context = self.document.managedObjectContext; // start doing Core Data stuff with context
+        NSLog(@"NSManagedObjectContext created.");
+    } else {
+        NSLog(@"NSManagedObjectContext not created.");
+    }
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
+    [self.document saveToURL:self.documentURL forSaveOperation:UIDocumentSaveForOverwriting completionHandler:nil];
+    //TODO: remove this. only neccessary for running on simulator, otherwise autosaved.
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
