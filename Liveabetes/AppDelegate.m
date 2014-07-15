@@ -14,6 +14,12 @@
 {
     // Override point for customization after application launch.
     [self initializeManagedDocument];
+    
+    NSDictionary *appDefaults = [NSDictionary
+                                 dictionaryWithObjects:@[[NSNumber numberWithInt:120], [NSNumber numberWithInt:80]] forKeys:@[@"TargetRangeHigh", @"TargetRangeLow"]];
+    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+    
     return YES;
 }
 

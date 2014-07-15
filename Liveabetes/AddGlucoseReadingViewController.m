@@ -27,10 +27,24 @@
                                    insertNewObjectForEntityForName:@"GlucoseReading"
                                             inManagedObjectContext:self.context];
         reading.mgdl = [NSNumber numberWithInt:[self.glucoseNumber.text intValue]];
-        reading.date = self.timePicker.date;
+        reading.date = [self date:self.date withTime:self.timePicker.date];
+        
 
         self.reading = reading;
     }
+}
+
+-(NSDate *)date:(NSDate*)date withTime:(NSDate*)time
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [calendar components:(NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit) fromDate:date];
+    NSDateComponents *timeComponents = [calendar components:(NSSecondCalendarUnit | NSMinuteCalendarUnit | NSHourCalendarUnit) fromDate:time];
+    
+    dateComponents.second = timeComponents.second;
+    dateComponents.minute = timeComponents.minute;
+    dateComponents.hour = timeComponents.hour;
+    
+    return [calendar dateFromComponents:dateComponents];
 }
 
 - (IBAction)backgroundClick:(id)sender

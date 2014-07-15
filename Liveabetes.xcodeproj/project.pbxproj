@@ -44,6 +44,7 @@
 		F2AFA88D19738A73000F84E6 /* ManagedObjectContextSingletonContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AFA88C19738A73000F84E6 /* ManagedObjectContextSingletonContainer.m */; };
 		F2AFA890197390B0000F84E6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2AFA88E197390B0000F84E6 /* Model.xcdatamodeld */; };
 		F2AFA89319739124000F84E6 /* GlucoseReading.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AFA89219739124000F84E6 /* GlucoseReading.m */; };
+		F2AFA8961974C1C6000F84E6 /* GlucoseSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AFA8951974C1C6000F84E6 /* GlucoseSettingsTableViewController.m */; };
 		F2CB742819653C6E007662DC /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CB742719653C6E007662DC /* ActivityViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,8 @@
 		F2AFA88F197390B0000F84E6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		F2AFA89119739124000F84E6 /* GlucoseReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlucoseReading.h; path = CoreDataModels/GlucoseReading.h; sourceTree = "<group>"; };
 		F2AFA89219739124000F84E6 /* GlucoseReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlucoseReading.m; path = CoreDataModels/GlucoseReading.m; sourceTree = "<group>"; };
+		F2AFA8941974C1C6000F84E6 /* GlucoseSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlucoseSettingsTableViewController.h; sourceTree = "<group>"; };
+		F2AFA8951974C1C6000F84E6 /* GlucoseSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlucoseSettingsTableViewController.m; sourceTree = "<group>"; };
 		F2CB742619653C6E007662DC /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
 		F2CB742719653C6E007662DC /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +198,8 @@
 				F2AFA88B19738A73000F84E6 /* ManagedObjectContextSingletonContainer.h */,
 				F2AFA88C19738A73000F84E6 /* ManagedObjectContextSingletonContainer.m */,
 				F27F18FF196512C0006E14F9 /* Main.storyboard */,
+				F2AFA8941974C1C6000F84E6 /* GlucoseSettingsTableViewController.h */,
+				F2AFA8951974C1C6000F84E6 /* GlucoseSettingsTableViewController.m */,
 				F2AFA88819710079000F84E6 /* TargetRange.h */,
 				F2AFA88919710079000F84E6 /* TargetRange.m */,
 				F2AFA885196E321D000F84E6 /* GlucoseInfo.h */,
@@ -367,6 +372,7 @@
 				F27F18FE196512C0006E14F9 /* AppDelegate.m in Sources */,
 				F2AFA881196E2838000F84E6 /* GlucoseReadingsViewController.m in Sources */,
 				F2AFA88A19710079000F84E6 /* TargetRange.m in Sources */,
+				F2AFA8961974C1C6000F84E6 /* GlucoseSettingsTableViewController.m in Sources */,
 				F2AFA89319739124000F84E6 /* GlucoseReading.m in Sources */,
 				F27F18FA196512C0006E14F9 /* main.m in Sources */,
 				F2AFA88D19738A73000F84E6 /* ManagedObjectContextSingletonContainer.m in Sources */,

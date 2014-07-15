@@ -22,6 +22,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *incrementDateButton;
 @property (weak, nonatomic) IBOutlet UIButton *decrementDateButton;
 
+@property NSNumber *targetRangeHigh;
+@property NSNumber *targetRangeLow;
+
 @end
 
 @implementation GlucoseReadingsViewController
@@ -72,6 +75,13 @@
         [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
         self.dayLabel.text = [dateFormatter stringFromDate:self.currentDate];
     }
+    [self updateTable];
+}
+
+-(void)updateTable
+{
+    [self loadWithData];
+    [self.tableView reloadData];
 }
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
@@ -86,6 +96,14 @@
             [self.tableView reloadData];
         }
     }
+    
+    if (self.needToUpdateTable) {
+        NSLog(@"Reloading data after change of target range");
+        self.targetRangeHigh = [[NSUserDefaults standardUserDefaults] objectForKey:@"TargetRangeHigh"];
+        self.targetRangeLow = [[NSUserDefaults standardUserDefaults] objectForKey:@"TargetRangeLow"];
+        [self.tableView reloadData];
+        self.needToUpdateTable = NO;
+    }
 }
     
 /* 
@@ -94,11 +112,28 @@
  */
 - (void)loadWithData {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"GlucoseReading"];
-    NSDate *currentDate = [NSDate date];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date < %@", currentDate];
+    //NSDate *currentDate = [NSDate date];
+    //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"date < %@", currentDate];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [calendar components:(NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit) fromDate:self.currentDate];
+    
+    dateComponents.second = 0;
+    dateComponents.minute = 0;
+    dateComponents.hour = 0;
+    NSDate *startOfDay = [calendar dateFromComponents:dateComponents];
+    
+//    dateComponents.second = 59;
+//    dateComponents.minute = 59;
+//    dateComponents.hour = 23;
+    NSDateComponents *oneDay= [[NSDateComponents alloc] init];
+    oneDay.day = 1;
+    
+    
+    NSDate *endOfDay = [calendar dateByAddingComponents:oneDay toDate:startOfDay options:0];
+//    NSDate *endOfDay = [calendar dateFromComponents:dateComponents];
     
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES]];
-    request.predicate = predicate;
+    request.predicate = [NSPredicate predicateWithFormat:@"(date >= %@) AND (date < %@)", startOfDay, endOfDay];
     
     NSError *error;
     NSArray *results = [self.context executeFetchRequest:request error:&error];
@@ -145,11 +180,7 @@
 //    cell.detailTextLabel.textColor = [UIColor blackColor];
 //    cell.detailTextLabel.text = [self.timeFormatter stringFromDate:reading.date];
     
-    //TODO: make this a default setting
-    TargetRange *range = [[TargetRange alloc] init];
-    range.high = [NSNumber numberWithInt:120];
-    range.low = [NSNumber numberWithInt:80];
-    cell.backgroundColor = [self backgroundColorForMgdl:reading.mgdl andTargetRange:range];
+    cell.backgroundColor = [self backgroundColorForMgdl:reading.mgdl];
     
     return cell;
 }
@@ -179,11 +210,11 @@
 #pragma mark - Cell background color methods
 
 // assuming target range is valid (max > min)
--(UIColor*)backgroundColorForMgdl:(NSNumber*)mgdl andTargetRange:(TargetRange*)range
+-(UIColor*)backgroundColorForMgdl:(NSNumber*)mgdl
 {
     int glucoseReading = mgdl.intValue;
-    int max = range.high.intValue;
-    int min = range.low.intValue;
+    int max = self.targetRangeHigh.intValue; //range.high.intValue;
+    int min = self.targetRangeLow.intValue; //range.low.intValue;
     
     if (glucoseReading <= max && glucoseReading >= min) {
         return [self backgroundColorInRangeforMgdl:glucoseReading max:max min:min];
@@ -263,6 +294,9 @@
     }
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
     self.dailyReadings = [[NSMutableArray alloc] init];
+    self.targetRangeHigh = [[NSUserDefaults standardUserDefaults] objectForKey:@"TargetRangeHigh"];
+    self.targetRangeLow = [[NSUserDefaults standardUserDefaults] objectForKey:@"TargetRangeLow"];
+    
     [self loadWithData];
 }
 
@@ -286,6 +320,7 @@
         if ([navController.topViewController isKindOfClass:[AddGlucoseReadingViewController class]]) {
             AddGlucoseReadingViewController *addVC = (AddGlucoseReadingViewController*)navController.topViewController;
             addVC.context = self.context;
+            addVC.date = self.currentDate;
         } else {
             NSLog(@"navController.topViewController was not AddGlucoseReadingViewController instance");
         }

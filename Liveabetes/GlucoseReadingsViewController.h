@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSManagedObjectContext *context;
 @property (strong, nonatomic) NSDateFormatter *timeFormatter;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
+@property BOOL needToUpdateTable; // if target range changes in settings
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue;
 

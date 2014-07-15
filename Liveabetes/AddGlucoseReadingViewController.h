@@ -15,5 +15,6 @@
 @property (strong, nonatomic) NSManagedObjectContext *context; // must be passed to controller first
 @property GlucoseReading *reading;
 @property (strong, nonatomic) NSDateFormatter *timeFormatter;
+@property (strong, nonatomic) NSDate *date; // date from parent view, need to change time components 
 
 @end
