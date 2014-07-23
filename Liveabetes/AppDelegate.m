@@ -12,6 +12,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
+    pageControl.backgroundColor = [UIColor whiteColor];
     // Override point for customization after application launch.
     [self initializeManagedDocument];
     
@@ -27,7 +31,7 @@
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *documentsDirectory = [[fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
-    NSString *documentName = @"LivabetesDataFile";
+    NSString *documentName = @"LivabetesDataFile3";
     NSURL *url = [documentsDirectory URLByAppendingPathComponent:documentName];
     self.documentURL = url;
     BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:[url path]];
@@ -54,7 +58,7 @@
         self.context = self.document.managedObjectContext; // start doing Core Data stuff with context
         NSLog(@"NSManagedObjectContext created.");
     } else {
-        NSLog(@"NSManagedObjectContext not created.");
+        NSLog(@"NSManagedObjectContext not created. Document State: %i", self.document.documentState);
     }
 }
 							

@@ -28,13 +28,16 @@
 		F27F18FA196512C0006E14F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F27F18F9196512C0006E14F9 /* main.m */; };
 		F27F18FE196512C0006E14F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F27F18FD196512C0006E14F9 /* AppDelegate.m */; };
 		F27F1901196512C0006E14F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F27F18FF196512C0006E14F9 /* Main.storyboard */; };
-		F27F1904196512C0006E14F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F27F1903196512C0006E14F9 /* ViewController.m */; };
 		F27F1906196512C0006E14F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F27F1905196512C0006E14F9 /* Images.xcassets */; };
 		F27F190D196512C0006E14F9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27F190C196512C0006E14F9 /* XCTest.framework */; };
 		F27F190E196512C0006E14F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27F18ED196512C0006E14F9 /* Foundation.framework */; };
 		F27F190F196512C0006E14F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F27F18F1196512C0006E14F9 /* UIKit.framework */; };
 		F27F1917196512C0006E14F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F27F1915196512C0006E14F9 /* InfoPlist.strings */; };
 		F27F1919196512C0006E14F9 /* LiveabetesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F27F1918196512C0006E14F9 /* LiveabetesTests.m */; };
+		F28D253B197DACEE00671210 /* AddA1cViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D253A197DACEE00671210 /* AddA1cViewController.m */; };
+		F28D253F197F74EE00671210 /* InsulinReminderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D253E197F74EE00671210 /* InsulinReminderTableViewController.m */; };
+		F28D2542197F750600671210 /* BolusTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D2541197F750600671210 /* BolusTableViewController.m */; };
+		F28D2545197F832B00671210 /* InsulinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D2544197F832B00671210 /* InsulinViewController.m */; };
 		F2AFA87A196E1FFA000F84E6 /* settings-32.png in Resources */ = {isa = PBXBuildFile; fileRef = F2AFA879196E1FFA000F84E6 /* settings-32.png */; };
 		F2AFA87E196E207A000F84E6 /* settings-25.png in Resources */ = {isa = PBXBuildFile; fileRef = F2AFA87D196E207A000F84E6 /* settings-25.png */; };
 		F2AFA881196E2838000F84E6 /* GlucoseReadingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AFA880196E2838000F84E6 /* GlucoseReadingsViewController.m */; };
@@ -45,7 +48,20 @@
 		F2AFA890197390B0000F84E6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2AFA88E197390B0000F84E6 /* Model.xcdatamodeld */; };
 		F2AFA89319739124000F84E6 /* GlucoseReading.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AFA89219739124000F84E6 /* GlucoseReading.m */; };
 		F2AFA8961974C1C6000F84E6 /* GlucoseSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AFA8951974C1C6000F84E6 /* GlucoseSettingsTableViewController.m */; };
-		F2CB742819653C6E007662DC /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2CB742719653C6E007662DC /* ActivityViewController.m */; };
+		F2BA09BC1977182600218D81 /* A1cViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA09BB1977182600218D81 /* A1cViewController.m */; };
+		F2BA09C61977220C00218D81 /* JBBarChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA09C11977220C00218D81 /* JBBarChartView.m */; };
+		F2BA09C71977220C00218D81 /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA09C31977220C00218D81 /* JBChartView.m */; };
+		F2BA09C81977220C00218D81 /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA09C51977220C00218D81 /* JBLineChartView.m */; };
+		F2BA09CD19775CA300218D81 /* A1c.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA09CC19775CA300218D81 /* A1c.m */; };
+		F2BA09D61977A24D00218D81 /* JBBaseChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA09CF1977A24D00218D81 /* JBBaseChartViewController.m */; };
+		F2BA09D71977A24D00218D81 /* JBBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA09D11977A24D00218D81 /* JBBaseNavigationController.m */; };
+		F2BA09D81977A24D00218D81 /* JBBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA09D31977A24D00218D81 /* JBBaseTableViewController.m */; };
+		F2BA09D91977A24D00218D81 /* JBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA09D51977A24D00218D81 /* JBBaseViewController.m */; };
+		F2BA09E41977AA5B00218D81 /* JBChartTooltipTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA09E01977AA5B00218D81 /* JBChartTooltipTipView.m */; };
+		F2BA09E51977AA5B00218D81 /* JBChartTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA09E21977AA5B00218D81 /* JBChartTooltipView.m */; };
+		F2BA09E81977AA7A00218D81 /* JBChartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA09E71977AA7A00218D81 /* JBChartHeaderView.m */; };
+		F2BA09ED1977AA9500218D81 /* JBBarChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA09EA1977AA9500218D81 /* JBBarChartFooterView.m */; };
+		F2BA09EE1977AA9500218D81 /* JBLineChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA09EC1977AA9500218D81 /* JBLineChartFooterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,14 +100,20 @@
 		F27F18FC196512C0006E14F9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F27F18FD196512C0006E14F9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F27F1900196512C0006E14F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F27F1902196512C0006E14F9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F27F1903196512C0006E14F9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F27F1905196512C0006E14F9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F27F190B196512C0006E14F9 /* LiveabetesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiveabetesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27F190C196512C0006E14F9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F27F1914196512C0006E14F9 /* LiveabetesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LiveabetesTests-Info.plist"; sourceTree = "<group>"; };
 		F27F1916196512C0006E14F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F27F1918196512C0006E14F9 /* LiveabetesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiveabetesTests.m; sourceTree = "<group>"; };
+		F28D2539197DACEE00671210 /* AddA1cViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddA1cViewController.h; sourceTree = "<group>"; };
+		F28D253A197DACEE00671210 /* AddA1cViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddA1cViewController.m; sourceTree = "<group>"; };
+		F28D253D197F74EE00671210 /* InsulinReminderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsulinReminderTableViewController.h; sourceTree = "<group>"; };
+		F28D253E197F74EE00671210 /* InsulinReminderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsulinReminderTableViewController.m; sourceTree = "<group>"; };
+		F28D2540197F750600671210 /* BolusTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BolusTableViewController.h; sourceTree = "<group>"; };
+		F28D2541197F750600671210 /* BolusTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BolusTableViewController.m; sourceTree = "<group>"; };
+		F28D2543197F832B00671210 /* InsulinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsulinViewController.h; sourceTree = "<group>"; };
+		F28D2544197F832B00671210 /* InsulinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsulinViewController.m; sourceTree = "<group>"; };
 		F2AFA879196E1FFA000F84E6 /* settings-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-32.png"; sourceTree = "<group>"; };
 		F2AFA87D196E207A000F84E6 /* settings-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-25.png"; path = "../../../../Downloads/icons8_lightbox-4/PNG/25/settings-25.png"; sourceTree = "<group>"; };
 		F2AFA87F196E2838000F84E6 /* GlucoseReadingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlucoseReadingsViewController.h; sourceTree = "<group>"; };
@@ -109,8 +131,35 @@
 		F2AFA89219739124000F84E6 /* GlucoseReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlucoseReading.m; path = CoreDataModels/GlucoseReading.m; sourceTree = "<group>"; };
 		F2AFA8941974C1C6000F84E6 /* GlucoseSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlucoseSettingsTableViewController.h; sourceTree = "<group>"; };
 		F2AFA8951974C1C6000F84E6 /* GlucoseSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlucoseSettingsTableViewController.m; sourceTree = "<group>"; };
-		F2CB742619653C6E007662DC /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
-		F2CB742719653C6E007662DC /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
+		F2BA09BA1977182600218D81 /* A1cViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A1cViewController.h; sourceTree = "<group>"; };
+		F2BA09BB1977182600218D81 /* A1cViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A1cViewController.m; sourceTree = "<group>"; };
+		F2BA09C01977220C00218D81 /* JBBarChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBBarChartView.h; path = JBChartView/JBBarChartView.h; sourceTree = "<group>"; };
+		F2BA09C11977220C00218D81 /* JBBarChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBBarChartView.m; path = JBChartView/JBBarChartView.m; sourceTree = "<group>"; };
+		F2BA09C21977220C00218D81 /* JBChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBChartView.h; path = JBChartView/JBChartView.h; sourceTree = "<group>"; };
+		F2BA09C31977220C00218D81 /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBChartView.m; path = JBChartView/JBChartView.m; sourceTree = "<group>"; };
+		F2BA09C41977220C00218D81 /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBLineChartView.h; path = JBChartView/JBLineChartView.h; sourceTree = "<group>"; };
+		F2BA09C51977220C00218D81 /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JBLineChartView.m; path = JBChartView/JBLineChartView.m; sourceTree = "<group>"; };
+		F2BA09CA1977240900218D81 /* JBColorConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBColorConstants.h; sourceTree = "<group>"; };
+		F2BA09CB19775CA300218D81 /* A1c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = A1c.h; sourceTree = "<group>"; };
+		F2BA09CC19775CA300218D81 /* A1c.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = A1c.m; sourceTree = "<group>"; };
+		F2BA09CE1977A24D00218D81 /* JBBaseChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBaseChartViewController.h; sourceTree = "<group>"; };
+		F2BA09CF1977A24D00218D81 /* JBBaseChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBaseChartViewController.m; sourceTree = "<group>"; };
+		F2BA09D01977A24D00218D81 /* JBBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBaseNavigationController.h; sourceTree = "<group>"; };
+		F2BA09D11977A24D00218D81 /* JBBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBaseNavigationController.m; sourceTree = "<group>"; };
+		F2BA09D21977A24D00218D81 /* JBBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBaseTableViewController.h; sourceTree = "<group>"; };
+		F2BA09D31977A24D00218D81 /* JBBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBaseTableViewController.m; sourceTree = "<group>"; };
+		F2BA09D41977A24D00218D81 /* JBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBaseViewController.h; sourceTree = "<group>"; };
+		F2BA09D51977A24D00218D81 /* JBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBaseViewController.m; sourceTree = "<group>"; };
+		F2BA09DF1977AA5B00218D81 /* JBChartTooltipTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartTooltipTipView.h; sourceTree = "<group>"; };
+		F2BA09E01977AA5B00218D81 /* JBChartTooltipTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartTooltipTipView.m; sourceTree = "<group>"; };
+		F2BA09E11977AA5B00218D81 /* JBChartTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartTooltipView.h; sourceTree = "<group>"; };
+		F2BA09E21977AA5B00218D81 /* JBChartTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartTooltipView.m; sourceTree = "<group>"; };
+		F2BA09E61977AA7A00218D81 /* JBChartHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBChartHeaderView.h; sourceTree = "<group>"; };
+		F2BA09E71977AA7A00218D81 /* JBChartHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartHeaderView.m; sourceTree = "<group>"; };
+		F2BA09E91977AA9500218D81 /* JBBarChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartFooterView.h; sourceTree = "<group>"; };
+		F2BA09EA1977AA9500218D81 /* JBBarChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBarChartFooterView.m; sourceTree = "<group>"; };
+		F2BA09EB1977AA9500218D81 /* JBLineChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartFooterView.h; sourceTree = "<group>"; };
+		F2BA09EC1977AA9500218D81 /* JBLineChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartFooterView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,28 +242,14 @@
 		F27F18F3196512C0006E14F9 /* Liveabetes */ = {
 			isa = PBXGroup;
 			children = (
-				F27F18FC196512C0006E14F9 /* AppDelegate.h */,
-				F27F18FD196512C0006E14F9 /* AppDelegate.m */,
-				F2AFA88B19738A73000F84E6 /* ManagedObjectContextSingletonContainer.h */,
-				F2AFA88C19738A73000F84E6 /* ManagedObjectContextSingletonContainer.m */,
+				F28D253C197F74C900671210 /* Insulin View */,
+				F2BA09C9197723ED00218D81 /* Constants */,
+				F2BA09BF197721F400218D81 /* JBChartView */,
+				F2BA09BE19771C6400218D81 /* Delegate */,
+				F2BA09BD19771C5000218D81 /* A1C View */,
+				F2BA09B91977165D00218D81 /* Model */,
+				F2BA09B81977163400218D81 /* Glucose View */,
 				F27F18FF196512C0006E14F9 /* Main.storyboard */,
-				F2AFA8941974C1C6000F84E6 /* GlucoseSettingsTableViewController.h */,
-				F2AFA8951974C1C6000F84E6 /* GlucoseSettingsTableViewController.m */,
-				F2AFA88819710079000F84E6 /* TargetRange.h */,
-				F2AFA88919710079000F84E6 /* TargetRange.m */,
-				F2AFA885196E321D000F84E6 /* GlucoseInfo.h */,
-				F2AFA886196E321D000F84E6 /* GlucoseInfo.m */,
-				F2AFA882196E2865000F84E6 /* AddGlucoseReadingViewController.h */,
-				F2AFA883196E2865000F84E6 /* AddGlucoseReadingViewController.m */,
-				F2AFA87F196E2838000F84E6 /* GlucoseReadingsViewController.h */,
-				F2AFA880196E2838000F84E6 /* GlucoseReadingsViewController.m */,
-				F2AFA88E197390B0000F84E6 /* Model.xcdatamodeld */,
-				F2AFA89119739124000F84E6 /* GlucoseReading.h */,
-				F2AFA89219739124000F84E6 /* GlucoseReading.m */,
-				F2CB742619653C6E007662DC /* ActivityViewController.h */,
-				F2CB742719653C6E007662DC /* ActivityViewController.m */,
-				F27F1902196512C0006E14F9 /* ViewController.h */,
-				F27F1903196512C0006E14F9 /* ViewController.m */,
 				F27F1905196512C0006E14F9 /* Images.xcassets */,
 				F27F18F4196512C0006E14F9 /* Supporting Files */,
 			);
@@ -249,6 +284,109 @@
 				F27F1915196512C0006E14F9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F28D253C197F74C900671210 /* Insulin View */ = {
+			isa = PBXGroup;
+			children = (
+				F28D253D197F74EE00671210 /* InsulinReminderTableViewController.h */,
+				F28D253E197F74EE00671210 /* InsulinReminderTableViewController.m */,
+				F28D2540197F750600671210 /* BolusTableViewController.h */,
+				F28D2541197F750600671210 /* BolusTableViewController.m */,
+				F28D2543197F832B00671210 /* InsulinViewController.h */,
+				F28D2544197F832B00671210 /* InsulinViewController.m */,
+			);
+			name = "Insulin View";
+			sourceTree = "<group>";
+		};
+		F2BA09B81977163400218D81 /* Glucose View */ = {
+			isa = PBXGroup;
+			children = (
+				F2AFA8941974C1C6000F84E6 /* GlucoseSettingsTableViewController.h */,
+				F2AFA8951974C1C6000F84E6 /* GlucoseSettingsTableViewController.m */,
+				F2AFA88819710079000F84E6 /* TargetRange.h */,
+				F2AFA88919710079000F84E6 /* TargetRange.m */,
+				F2AFA885196E321D000F84E6 /* GlucoseInfo.h */,
+				F2AFA886196E321D000F84E6 /* GlucoseInfo.m */,
+				F2AFA882196E2865000F84E6 /* AddGlucoseReadingViewController.h */,
+				F2AFA883196E2865000F84E6 /* AddGlucoseReadingViewController.m */,
+				F2AFA87F196E2838000F84E6 /* GlucoseReadingsViewController.h */,
+				F2AFA880196E2838000F84E6 /* GlucoseReadingsViewController.m */,
+			);
+			name = "Glucose View";
+			sourceTree = "<group>";
+		};
+		F2BA09B91977165D00218D81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2AFA88E197390B0000F84E6 /* Model.xcdatamodeld */,
+				F2BA09CB19775CA300218D81 /* A1c.h */,
+				F2BA09CC19775CA300218D81 /* A1c.m */,
+				F2AFA89119739124000F84E6 /* GlucoseReading.h */,
+				F2AFA89219739124000F84E6 /* GlucoseReading.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F2BA09BD19771C5000218D81 /* A1C View */ = {
+			isa = PBXGroup;
+			children = (
+				F2BA09BA1977182600218D81 /* A1cViewController.h */,
+				F2BA09BB1977182600218D81 /* A1cViewController.m */,
+				F28D2539197DACEE00671210 /* AddA1cViewController.h */,
+				F28D253A197DACEE00671210 /* AddA1cViewController.m */,
+			);
+			name = "A1C View";
+			sourceTree = "<group>";
+		};
+		F2BA09BE19771C6400218D81 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				F27F18FC196512C0006E14F9 /* AppDelegate.h */,
+				F27F18FD196512C0006E14F9 /* AppDelegate.m */,
+				F2AFA88B19738A73000F84E6 /* ManagedObjectContextSingletonContainer.h */,
+				F2AFA88C19738A73000F84E6 /* ManagedObjectContextSingletonContainer.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		F2BA09BF197721F400218D81 /* JBChartView */ = {
+			isa = PBXGroup;
+			children = (
+				F2BA09CE1977A24D00218D81 /* JBBaseChartViewController.h */,
+				F2BA09CF1977A24D00218D81 /* JBBaseChartViewController.m */,
+				F2BA09D01977A24D00218D81 /* JBBaseNavigationController.h */,
+				F2BA09D11977A24D00218D81 /* JBBaseNavigationController.m */,
+				F2BA09D21977A24D00218D81 /* JBBaseTableViewController.h */,
+				F2BA09D31977A24D00218D81 /* JBBaseTableViewController.m */,
+				F2BA09D41977A24D00218D81 /* JBBaseViewController.h */,
+				F2BA09D51977A24D00218D81 /* JBBaseViewController.m */,
+				F2BA09C01977220C00218D81 /* JBBarChartView.h */,
+				F2BA09E91977AA9500218D81 /* JBBarChartFooterView.h */,
+				F2BA09EA1977AA9500218D81 /* JBBarChartFooterView.m */,
+				F2BA09EB1977AA9500218D81 /* JBLineChartFooterView.h */,
+				F2BA09EC1977AA9500218D81 /* JBLineChartFooterView.m */,
+				F2BA09DF1977AA5B00218D81 /* JBChartTooltipTipView.h */,
+				F2BA09E01977AA5B00218D81 /* JBChartTooltipTipView.m */,
+				F2BA09E61977AA7A00218D81 /* JBChartHeaderView.h */,
+				F2BA09E71977AA7A00218D81 /* JBChartHeaderView.m */,
+				F2BA09E11977AA5B00218D81 /* JBChartTooltipView.h */,
+				F2BA09E21977AA5B00218D81 /* JBChartTooltipView.m */,
+				F2BA09C11977220C00218D81 /* JBBarChartView.m */,
+				F2BA09C21977220C00218D81 /* JBChartView.h */,
+				F2BA09C31977220C00218D81 /* JBChartView.m */,
+				F2BA09C41977220C00218D81 /* JBLineChartView.h */,
+				F2BA09C51977220C00218D81 /* JBLineChartView.m */,
+			);
+			name = JBChartView;
+			sourceTree = "<group>";
+		};
+		F2BA09C9197723ED00218D81 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F2BA09CA1977240900218D81 /* JBColorConstants.h */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,18 +505,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F27F1904196512C0006E14F9 /* ViewController.m in Sources */,
+				F28D253B197DACEE00671210 /* AddA1cViewController.m in Sources */,
+				F2BA09EE1977AA9500218D81 /* JBLineChartFooterView.m in Sources */,
+				F2BA09E81977AA7A00218D81 /* JBChartHeaderView.m in Sources */,
+				F2BA09BC1977182600218D81 /* A1cViewController.m in Sources */,
 				F2AFA887196E321D000F84E6 /* GlucoseInfo.m in Sources */,
 				F27F18FE196512C0006E14F9 /* AppDelegate.m in Sources */,
 				F2AFA881196E2838000F84E6 /* GlucoseReadingsViewController.m in Sources */,
 				F2AFA88A19710079000F84E6 /* TargetRange.m in Sources */,
+				F2BA09C71977220C00218D81 /* JBChartView.m in Sources */,
+				F2BA09D81977A24D00218D81 /* JBBaseTableViewController.m in Sources */,
 				F2AFA8961974C1C6000F84E6 /* GlucoseSettingsTableViewController.m in Sources */,
+				F2BA09E41977AA5B00218D81 /* JBChartTooltipTipView.m in Sources */,
+				F2BA09D71977A24D00218D81 /* JBBaseNavigationController.m in Sources */,
 				F2AFA89319739124000F84E6 /* GlucoseReading.m in Sources */,
 				F27F18FA196512C0006E14F9 /* main.m in Sources */,
+				F2BA09C81977220C00218D81 /* JBLineChartView.m in Sources */,
+				F28D2542197F750600671210 /* BolusTableViewController.m in Sources */,
 				F2AFA88D19738A73000F84E6 /* ManagedObjectContextSingletonContainer.m in Sources */,
+				F2BA09C61977220C00218D81 /* JBBarChartView.m in Sources */,
+				F28D253F197F74EE00671210 /* InsulinReminderTableViewController.m in Sources */,
+				F2BA09CD19775CA300218D81 /* A1c.m in Sources */,
 				F2AFA890197390B0000F84E6 /* Model.xcdatamodeld in Sources */,
+				F2BA09ED1977AA9500218D81 /* JBBarChartFooterView.m in Sources */,
+				F28D2545197F832B00671210 /* InsulinViewController.m in Sources */,
+				F2BA09D61977A24D00218D81 /* JBBaseChartViewController.m in Sources */,
+				F2BA09E51977AA5B00218D81 /* JBChartTooltipView.m in Sources */,
 				F2AFA884196E2865000F84E6 /* AddGlucoseReadingViewController.m in Sources */,
-				F2CB742819653C6E007662DC /* ActivityViewController.m in Sources */,
+				F2BA09D91977A24D00218D81 /* JBBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

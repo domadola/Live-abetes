@@ -105,11 +105,7 @@
         self.needToUpdateTable = NO;
     }
 }
-    
-/* 
- Placeholder for now. 
- TODO: Load data from CoreData!
- */
+
 - (void)loadWithData {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"GlucoseReading"];
     //NSDate *currentDate = [NSDate date];
