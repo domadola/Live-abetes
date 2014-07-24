@@ -10,4 +10,8 @@
 
 @interface BolusTableViewController : UITableViewController
 
+@property NSManagedObjectContext *context; // set this before loading
+
+- (IBAction)unwindToBolusTable:(UIStoryboardSegue *)segue;
+
 @end

@@ -4,23 +4,24 @@
         <attribute name="a1c" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
-    <entity name="Bolus" syncable="YES">
+    <entity name="Bolus" representedClassName="Bolus" syncable="YES">
         <attribute name="carbs" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="insulinUnits" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
-        <relationship name="insulinType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="InsulinType" inverseName="insulinType" inverseEntity="InsulinType" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="insulinUnits" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="insulinType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="InsulinType" syncable="YES"/>
     </entity>
     <entity name="GlucoseReading" representedClassName="GlucoseReading" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="mgdl" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="InsulinType" syncable="YES">
+    <entity name="InsulinType" representedClassName="InsulinType" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="insulinType" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bolus" inverseName="insulinType" inverseEntity="Bolus" syncable="YES"/>
+        <relationship name="insulinType" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bolus" syncable="YES"/>
     </entity>
     <elements>
         <element name="A1c" positionX="-270" positionY="-9" width="128" height="73"/>
         <element name="GlucoseReading" positionX="-63" positionY="-18" width="128" height="73"/>
-        <element name="Bolus" positionX="-261" positionY="-196" width="128" height="88"/>
+        <element name="Bolus" positionX="-261" positionY="-196" width="128" height="103"/>
         <element name="InsulinType" positionX="-45" positionY="-184" width="128" height="73"/>
     </elements>
 </model>

@@ -10,4 +10,6 @@
 
 @interface InsulinReminderTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSManagedObjectContext *context;
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "InsulinViewController.h"
+#import "ManagedObjectContextSingletonContainer.h"
 
 @interface InsulinViewController ()
 
@@ -27,6 +28,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.contextContainer = [[ManagedObjectContextSingletonContainer alloc] init];
+    
     // Create page view controller
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"pageViewController"];
     self.pageViewController.dataSource = self;
@@ -76,14 +79,31 @@
     return 0;
 }
 
-- (BolusTableViewController*)bolusController
+- (UINavigationController*)bolusController
 {
-    return [self.storyboard instantiateViewControllerWithIdentifier:@"insulinNavController"];
+    if (!_bolusController) {
+        //_bolusController = [self.storyboard instantiateViewControllerWithIdentifier:@"insulinNavController"];
+        _bolusController = [self.storyboard instantiateViewControllerWithIdentifier:@"insulinNavController"];
+        if ([_bolusController.topViewController isKindOfClass:[BolusTableViewController class]]) {
+            BolusTableViewController *bolusTVC = (BolusTableViewController*)_bolusController.topViewController;
+            bolusTVC.context = self.contextContainer.context;
+        }
+        //BolusTableViewController *b = ((UINavigationController*)_bolusController).topViewController;
+        //b.context = self.contextContainer.context;
+    }
+    
+    return _bolusController;
 }
 
-- (InsulinReminderTableViewController*)reminderController
+- (UINavigationController*)reminderController
 {
-    return [self.storyboard instantiateViewControllerWithIdentifier:@"reminderNavController"];
+    if (!_reminderController) {
+        _reminderController = [self.storyboard
+                                                      instantiateViewControllerWithIdentifier:@"reminderNavController"];
+        //_reminderController.context = self.contextContainer.context;
+    }
+    
+    return _reminderController;
 }
 
 
