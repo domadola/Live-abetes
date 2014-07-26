@@ -4,6 +4,10 @@
         <attribute name="a1c" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
+    <entity name="Activity" representedClassName="Activity" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="minutes" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
     <entity name="Bolus" representedClassName="Bolus" syncable="YES">
         <attribute name="carbs" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
@@ -18,10 +22,18 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="insulinType" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Bolus" syncable="YES"/>
     </entity>
+    <entity name="Reminder" representedClassName="Reminder" syncable="YES">
+        <attribute name="isCheckBg" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="repeatDaily" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
     <elements>
         <element name="A1c" positionX="-270" positionY="-9" width="128" height="73"/>
         <element name="GlucoseReading" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="Bolus" positionX="-261" positionY="-196" width="128" height="103"/>
         <element name="InsulinType" positionX="-45" positionY="-184" width="128" height="73"/>
+        <element name="Reminder" positionX="-135" positionY="-72" width="128" height="103"/>
+        <element name="Activity" positionX="-126" positionY="-63" width="128" height="73"/>
     </elements>
 </model>

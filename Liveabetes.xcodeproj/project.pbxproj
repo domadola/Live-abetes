@@ -43,6 +43,11 @@
 		F28D254E19803A2A00671210 /* AddInsulinTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D254D19803A2A00671210 /* AddInsulinTypeViewController.m */; };
 		F28D255D1980BAE800671210 /* InsulinType.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D255C1980BAE800671210 /* InsulinType.m */; };
 		F28D25601980D6DA00671210 /* Bolus.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D255F1980D6DA00671210 /* Bolus.m */; };
+		F28D25631981D6E500671210 /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D25621981D6E500671210 /* Reminder.m */; };
+		F28D25661981E70D00671210 /* EditReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D25651981E70D00671210 /* EditReminderViewController.m */; };
+		F28D256A1982049100671210 /* ActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D25691982049100671210 /* ActivityViewController.m */; };
+		F28D256D1983602100671210 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D256C1983602100671210 /* Activity.m */; };
+		F28D257019836B7900671210 /* DLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28D256F19836B7900671210 /* DLTabBarController.m */; };
 		F2AFA87A196E1FFA000F84E6 /* settings-32.png in Resources */ = {isa = PBXBuildFile; fileRef = F2AFA879196E1FFA000F84E6 /* settings-32.png */; };
 		F2AFA87E196E207A000F84E6 /* settings-25.png in Resources */ = {isa = PBXBuildFile; fileRef = F2AFA87D196E207A000F84E6 /* settings-25.png */; };
 		F2AFA881196E2838000F84E6 /* GlucoseReadingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2AFA880196E2838000F84E6 /* GlucoseReadingsViewController.m */; };
@@ -129,6 +134,16 @@
 		F28D255C1980BAE800671210 /* InsulinType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsulinType.m; sourceTree = "<group>"; };
 		F28D255E1980D6DA00671210 /* Bolus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bolus.h; sourceTree = "<group>"; };
 		F28D255F1980D6DA00671210 /* Bolus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bolus.m; sourceTree = "<group>"; };
+		F28D25611981D6E500671210 /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
+		F28D25621981D6E500671210 /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminder.m; sourceTree = "<group>"; };
+		F28D25641981E70D00671210 /* EditReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditReminderViewController.h; sourceTree = "<group>"; };
+		F28D25651981E70D00671210 /* EditReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditReminderViewController.m; sourceTree = "<group>"; };
+		F28D25681982049100671210 /* ActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityViewController.h; sourceTree = "<group>"; };
+		F28D25691982049100671210 /* ActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityViewController.m; sourceTree = "<group>"; };
+		F28D256B1983602100671210 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		F28D256C1983602100671210 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
+		F28D256E19836B7900671210 /* DLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLTabBarController.h; sourceTree = "<group>"; };
+		F28D256F19836B7900671210 /* DLTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLTabBarController.m; sourceTree = "<group>"; };
 		F2AFA879196E1FFA000F84E6 /* settings-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-32.png"; sourceTree = "<group>"; };
 		F2AFA87D196E207A000F84E6 /* settings-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings-25.png"; path = "../../../../Downloads/icons8_lightbox-4/PNG/25/settings-25.png"; sourceTree = "<group>"; };
 		F2AFA87F196E2838000F84E6 /* GlucoseReadingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlucoseReadingsViewController.h; sourceTree = "<group>"; };
@@ -257,6 +272,7 @@
 		F27F18F3196512C0006E14F9 /* Liveabetes */ = {
 			isa = PBXGroup;
 			children = (
+				F28D25671982048500671210 /* Activity View */,
 				F28D253C197F74C900671210 /* Insulin View */,
 				F2BA09C9197723ED00218D81 /* Constants */,
 				F2BA09BF197721F400218D81 /* JBChartView */,
@@ -265,6 +281,8 @@
 				F2BA09B91977165D00218D81 /* Model */,
 				F2BA09B81977163400218D81 /* Glucose View */,
 				F27F18FF196512C0006E14F9 /* Main.storyboard */,
+				F28D256E19836B7900671210 /* DLTabBarController.h */,
+				F28D256F19836B7900671210 /* DLTabBarController.m */,
 				F27F1905196512C0006E14F9 /* Images.xcassets */,
 				F27F18F4196512C0006E14F9 /* Supporting Files */,
 			);
@@ -310,6 +328,8 @@
 				F28D25471980399B00671210 /* AddBolusTableViewController.m */,
 				F28D253D197F74EE00671210 /* InsulinReminderTableViewController.h */,
 				F28D253E197F74EE00671210 /* InsulinReminderTableViewController.m */,
+				F28D25641981E70D00671210 /* EditReminderViewController.h */,
+				F28D25651981E70D00671210 /* EditReminderViewController.m */,
 				F28D2540197F750600671210 /* BolusTableViewController.h */,
 				F28D2541197F750600671210 /* BolusTableViewController.m */,
 				F28D2543197F832B00671210 /* InsulinViewController.h */,
@@ -318,6 +338,15 @@
 				F28D254D19803A2A00671210 /* AddInsulinTypeViewController.m */,
 			);
 			name = "Insulin View";
+			sourceTree = "<group>";
+		};
+		F28D25671982048500671210 /* Activity View */ = {
+			isa = PBXGroup;
+			children = (
+				F28D25681982049100671210 /* ActivityViewController.h */,
+				F28D25691982049100671210 /* ActivityViewController.m */,
+			);
+			name = "Activity View";
 			sourceTree = "<group>";
 		};
 		F2BA09B81977163400218D81 /* Glucose View */ = {
@@ -341,6 +370,10 @@
 			isa = PBXGroup;
 			children = (
 				F2AFA88E197390B0000F84E6 /* Model.xcdatamodeld */,
+				F28D256B1983602100671210 /* Activity.h */,
+				F28D256C1983602100671210 /* Activity.m */,
+				F28D25611981D6E500671210 /* Reminder.h */,
+				F28D25621981D6E500671210 /* Reminder.m */,
 				F28D255E1980D6DA00671210 /* Bolus.h */,
 				F28D255F1980D6DA00671210 /* Bolus.m */,
 				F28D255B1980BAE800671210 /* InsulinType.h */,
@@ -530,12 +563,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F28D25661981E70D00671210 /* EditReminderViewController.m in Sources */,
+				F28D257019836B7900671210 /* DLTabBarController.m in Sources */,
 				F28D253B197DACEE00671210 /* AddA1cViewController.m in Sources */,
 				F2BA09EE1977AA9500218D81 /* JBLineChartFooterView.m in Sources */,
 				F28D254E19803A2A00671210 /* AddInsulinTypeViewController.m in Sources */,
 				F2BA09E81977AA7A00218D81 /* JBChartHeaderView.m in Sources */,
 				F2BA09BC1977182600218D81 /* A1cViewController.m in Sources */,
 				F28D254B19803A0F00671210 /* SelectInsulinTypeTableViewController.m in Sources */,
+				F28D256A1982049100671210 /* ActivityViewController.m in Sources */,
 				F2AFA887196E321D000F84E6 /* GlucoseInfo.m in Sources */,
 				F27F18FE196512C0006E14F9 /* AppDelegate.m in Sources */,
 				F2AFA881196E2838000F84E6 /* GlucoseReadingsViewController.m in Sources */,
@@ -543,6 +579,7 @@
 				F2BA09C71977220C00218D81 /* JBChartView.m in Sources */,
 				F2BA09D81977A24D00218D81 /* JBBaseTableViewController.m in Sources */,
 				F2AFA8961974C1C6000F84E6 /* GlucoseSettingsTableViewController.m in Sources */,
+				F28D25631981D6E500671210 /* Reminder.m in Sources */,
 				F2BA09E41977AA5B00218D81 /* JBChartTooltipTipView.m in Sources */,
 				F2BA09D71977A24D00218D81 /* JBBaseNavigationController.m in Sources */,
 				F2AFA89319739124000F84E6 /* GlucoseReading.m in Sources */,
@@ -552,6 +589,7 @@
 				F28D2542197F750600671210 /* BolusTableViewController.m in Sources */,
 				F2AFA88D19738A73000F84E6 /* ManagedObjectContextSingletonContainer.m in Sources */,
 				F2BA09C61977220C00218D81 /* JBBarChartView.m in Sources */,
+				F28D256D1983602100671210 /* Activity.m in Sources */,
 				F28D253F197F74EE00671210 /* InsulinReminderTableViewController.m in Sources */,
 				F2BA09CD19775CA300218D81 /* A1c.m in Sources */,
 				F2AFA890197390B0000F84E6 /* Model.xcdatamodeld in Sources */,

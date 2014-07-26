@@ -13,12 +13,19 @@
 
 - (NSManagedObjectContext *) context
 {
-    if (_context != nil) {
-        return _context;
+//    if (_context != nil) {
+//        return _context;
+//    }
+//    
+//    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+//    _context = appDelegate.context;
+//    return _context;
+    
+    if (!_context) {
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        _context = appDelegate.context;
     }
     
-    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    _context = appDelegate.context;
     return _context;
 }
 

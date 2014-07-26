@@ -20,7 +20,7 @@
     [self initializeManagedDocument];
     
     NSDictionary *appDefaults = [NSDictionary
-                                 dictionaryWithObjects:@[[NSNumber numberWithInt:120], [NSNumber numberWithInt:80]] forKeys:@[@"TargetRangeHigh", @"TargetRangeLow"]];
+                                 dictionaryWithObjects:@[[NSNumber numberWithInt:120], [NSNumber numberWithInt:80], [NSNumber numberWithInt:60]] forKeys:@[@"TargetRangeHigh", @"TargetRangeLow", @"ActivityGoal"]];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
     
@@ -31,7 +31,7 @@
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *documentsDirectory = [[fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] firstObject];
-    NSString *documentName = @"LivabetesDataFile5";
+    NSString *documentName = @"LivabetesDataFile_1";
     NSURL *url = [documentsDirectory URLByAppendingPathComponent:documentName];
     self.documentURL = url;
     BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:[url path]];
@@ -90,6 +90,16 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)application:(UIApplication *)application
+didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Alert"
+                                                        message:notification.alertBody
+                                                       delegate:self cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    [alertView show];
 }
 
 @end

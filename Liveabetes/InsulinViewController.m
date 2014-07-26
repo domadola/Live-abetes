@@ -98,9 +98,11 @@
 - (UINavigationController*)reminderController
 {
     if (!_reminderController) {
-        _reminderController = [self.storyboard
-                                                      instantiateViewControllerWithIdentifier:@"reminderNavController"];
-        //_reminderController.context = self.contextContainer.context;
+        _reminderController = [self.storyboard instantiateViewControllerWithIdentifier:@"reminderNavController"];
+        if ([_reminderController.topViewController isKindOfClass:[InsulinReminderTableViewController class]]) {
+            InsulinReminderTableViewController *reminderController = (InsulinReminderTableViewController*)_reminderController.topViewController;
+            reminderController.context = self.contextContainer.context;
+        }
     }
     
     return _reminderController;

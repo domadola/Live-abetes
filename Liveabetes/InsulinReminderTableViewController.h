@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *context;
 
+- (IBAction)unwindToReminderTable:(UIStoryboardSegue*)segue;
+
 @end
