@@ -131,6 +131,7 @@
     self.lineChartView.dataSource = self;
     
     [self initWithFakeData];
+    self.targetTextField.text = [[[NSUserDefaults standardUserDefaults] valueForKey:@"A1cGoal"] stringValue];
     
     //self.lineChartView.maximumValue = [[self maximumFromArray:self.graphDataPoints] floatValue];
     //self.lineChartView.minimumValue = [[self minimumFromArray:self.graphDataPoints] floatValue];
@@ -193,6 +194,7 @@
 - (void)lineChartView:(JBLineChartView *)lineChartView didSelectLineAtIndex:(NSUInteger)lineIndex horizontalIndex:(NSUInteger)horizontalIndex touchPoint:(CGPoint)touchPoint
 {
     //if (lineIndex == 1) return; // don't need a tool tip for target a1c line
+    [self.targetTextField resignFirstResponder];
     
     if (lineIndex == 0) {
         A1c *selected = [self.graphDataPoints objectAtIndex:horizontalIndex];
@@ -229,6 +231,20 @@
 {
     return lineIndex == 0 ? 2.0f : 1.0f;
 }
+
+- (IBAction)targetA1cChanged:(id)sender
+{
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithFloat:[self.targetTextField.text floatValue]] forKey:@"A1cGoal"];
+    NSLog(@"Updating data");
+    
+    [self updateData];
+}
+- (IBAction)targetA1cEditDidEnd:(id)sender
+{
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithFloat:[self.targetTextField.text floatValue]] forKey:@"A1cGoal"];
+    NSLog(@"Updating data");
+    
+    [self updateData];}
 
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView dotRadiusForLineAtLineIndex:(NSUInteger)lineIndex
 {

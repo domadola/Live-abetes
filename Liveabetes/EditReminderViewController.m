@@ -8,7 +8,7 @@
 
 #import "EditReminderViewController.h"
 
-@interface EditReminderViewController ()
+@interface EditReminderViewController () <UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 @property (weak, nonatomic) IBOutlet UITextView *informationTextView;
@@ -32,7 +32,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.informationTextView.delegate = self;
     if (self.isEditing) {
         Reminder *reminder = self.reminder;
         self.informationTextView.text = reminder.notes;
@@ -41,6 +41,27 @@
     } else {
         self.title = @"Add Reminder";
     }
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (IBAction)repeatDailyEdit:(id)sender
+{
+    NSLog(@"111111");
+    [self.informationTextView resignFirstResponder];
+}
+- (IBAction)datePickerEdit:(id)sender
+{
+    NSLog(@"222222");
+    [self.informationTextView resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning

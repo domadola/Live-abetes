@@ -12,6 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.contextLoaded = NO;
     UIPageControl *pageControl = [UIPageControl appearance];
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
     pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
@@ -20,9 +21,10 @@
     [self initializeManagedDocument];
     
     NSDictionary *appDefaults = [NSDictionary
-                                 dictionaryWithObjects:@[[NSNumber numberWithInt:120], [NSNumber numberWithInt:80], [NSNumber numberWithInt:60]] forKeys:@[@"TargetRangeHigh", @"TargetRangeLow", @"ActivityGoal"]];
+                                 dictionaryWithObjects:@[[NSNumber numberWithInt:120], [NSNumber numberWithInt:80], [NSNumber numberWithInt:60], [NSNumber numberWithFloat:7.0]] forKeys:@[@"TargetRangeHigh", @"TargetRangeLow", @"ActivityGoal", @"A1cGoal"]];
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+    
     
     return YES;
 }
@@ -35,20 +37,28 @@
     NSURL *url = [documentsDirectory URLByAppendingPathComponent:documentName];
     self.documentURL = url;
     BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:[url path]];
+    
+    __block BOOL finished = NO;
+    
     UIManagedDocument *managedDocument = [[UIManagedDocument alloc] initWithFileURL:url];
     if (fileExists) {
         [managedDocument openWithCompletionHandler:^(BOOL success) {
             self.document = managedDocument;
             NSLog(@"done opening document.");
-            [self initializeManagedObjectContext]; }];
+            [self initializeManagedObjectContext];
+            finished = YES;
+        }];
         NSLog(@"opening managed document.");
     } else {
         [managedDocument saveToURL:url forSaveOperation:UIDocumentSaveForCreating completionHandler:^(BOOL success) {
             self.document = managedDocument;
             NSLog(@"done creating document.");
-            [self initializeManagedObjectContext]; }];
+            [self initializeManagedObjectContext];
+            finished = YES;
+        }];
         NSLog(@"creating managed document.");
     }
+    
 }
 
 // assumes self.document has been initialized
@@ -56,6 +66,9 @@
 {
     if (self.document.documentState == UIDocumentStateNormal) {
         self.context = self.document.managedObjectContext; // start doing Core Data stuff with context
+        self.contextLoaded = YES;
+//        UIStoryboard* storyboard = [[[self window] rootViewController] storyboard];
+        self.window.rootViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"DLTabBarController"];
         NSLog(@"NSManagedObjectContext created.");
     } else {
         NSLog(@"NSManagedObjectContext not created. Document State: %i", self.document.documentState);

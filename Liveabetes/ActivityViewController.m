@@ -27,6 +27,11 @@
     }
     return self;
 }
+- (IBAction)backgroundClick:(id)sender
+{
+    [self.activityMinutesTextView resignFirstResponder];
+    [self.goalTextView resignFirstResponder];
+}
 
 - (void)viewDidLoad
 {
@@ -34,6 +39,9 @@
     // Do any additional setup after loading the view.
     self.goalTextView.delegate = self;
     self.activityMinutesTextView.delegate = self;
+    
+    //AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    //while (!appDelegate.contextLoaded);
     
     [self loadData];
     [self updateProgressBar];

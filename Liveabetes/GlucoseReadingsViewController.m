@@ -195,7 +195,7 @@
 {
     if(!_timeFormatter) {
         _timeFormatter = [[NSDateFormatter alloc] init];
-        [_timeFormatter setTimeStyle:NSDateFormatterMediumStyle];
+        [_timeFormatter setTimeStyle:NSDateFormatterShortStyle];
         [_timeFormatter setDateStyle:NSDateFormatterNoStyle];
     }
     
