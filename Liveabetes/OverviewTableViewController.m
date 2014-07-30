@@ -55,11 +55,18 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self loadDataWithDate:[NSDate date]];
+    [self loadDataWithDate:self.date];
     [self.tableView reloadData];
 }
 
-
+- (NSDate*)date
+{
+    if (!_date) {
+        _date = [NSDate date];
+    }
+        
+    return _date;
+}
 
 - (void)loadDataWithDate:(NSDate*)date
 {
@@ -91,11 +98,11 @@
         NSLog(@"Error! %@", error);
     }
     if ([results count] == 1) {
-        NSLog(@"There was a result!");
+        NSLog(@"There was an activity result!");
         Activity *activity = [results objectAtIndex:0];
         self.minutesOfActivity = activity.minutes;
     } else if ([results count] == 0){
-        NSLog(@"No results :(");
+        NSLog(@"No activity results :(");
         self.minutesOfActivity = [NSNumber numberWithInt:0];
     } else {
         NSLog(@"ERROR! More than one result for given day");
@@ -130,7 +137,7 @@
     float sum = 0.0f;
     for (GlucoseReading *reading in results) {
         sum += [reading.mgdl floatValue];
-        NSLog(@"sum: %f", sum);
+       // NSLog(@"sum: %f", sum);
     }
     if (sum == 0) {
         self.estimatedA1c = [NSNumber numberWithFloat:0.0f];
@@ -196,6 +203,10 @@
     NSError *error;
     NSArray *results = [self.context executeFetchRequest:request error:&error];
     
+    if (error) {
+        NSLog(@"ERROR returning glucose readings");
+    }
+    
     self.daysGlucoseReadings = [NSMutableArray arrayWithArray:results];
     NSLog(@"There were %i results", results.count);
     [self getStatsFromReadings];
@@ -207,6 +218,7 @@
         self.avg = 0;
         self.min = 0;
         self.max = 0;
+        NSLog(@"dailyGlucoseReadings was empty");
         return;
     }
     
@@ -329,7 +341,8 @@
 
 - (IBAction)unwindToOverview:(UIStoryboardSegue *)segue
 {
-    NSLog(@"unwindToOverview called");
+    NSLog(@"unwindToOverview called!!!");
+    NSLog(@"source is: %@", [segue sourceViewController]);
     if ([[segue sourceViewController] isKindOfClass:[OverviewDatePickerViewController class]]) {
         if (self.dateNeedsUpdate) {
             self.dateNeedsUpdate = NO;
